@@ -7,13 +7,44 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-onMounted(() => {
-  const options = {
-    container: 'luckysheet',
-    showinfobar: false
+import { onMounted, onBeforeUnmount, nextTick } from 'vue'
+
+let luckysheetInstance = null
+
+// 初始化LuckySheet的函数
+const initLuckysheet = async () => {
+  try {
+    // 确保DOM已经渲染
+    await nextTick()
+    // 初始化配置
+    const options = {
+      container: 'luckysheet',
+      showinfobar: false
+    }
+    
+    // 创建新实例
+    luckysheetInstance = luckysheet.create(options)
+  } catch (e) {
+    console.error('Error initializing luckysheet:', e)
   }
-  window.luckysheet.create(options)
+}
+
+onMounted(() => {
+  
+  // 组件挂载后初始化
+  initLuckysheet()
+})
+
+onBeforeUnmount(() => {
+  // 组件卸载前清理
+  if (luckysheetInstance) {
+    try {
+      window.luckysheet.destroy()
+    } catch (e) {
+      console.error('Error destroying luckysheet:', e)
+    }
+    luckysheetInstance = null
+  }
 })
 </script>
 

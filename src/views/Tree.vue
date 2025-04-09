@@ -234,7 +234,7 @@ const loadJsonControl = async () => {
 
 // 配置初始化
 onBeforeMount(async () => {
-  await loadJsonControl()
+  // await loadJsonControl()
 })
 
 onMounted(() => {
@@ -572,7 +572,7 @@ const changeDMConfig = async () => {
 
 // 初始化获取文件列表
 onMounted(() => {
-  getFileList()
+  // getFileList()
 })
 </script>
 
@@ -719,7 +719,7 @@ onMounted(() => {
         width: 155px;
         height: 24px;
         position: absolute;
-        bottom: 16px;
+        bottom: 3px;
         left: 20px;
         border: 1px solid rgb(171, 173, 179);
       }
@@ -728,6 +728,7 @@ onMounted(() => {
         height: 24px;
         border: 1px solid rgb(171, 173, 179);
         position: relative;
+        bottom: 3px;
         left: 260px;
       }
     }

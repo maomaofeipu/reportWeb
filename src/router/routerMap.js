@@ -5,10 +5,19 @@
 
 const constantRouterMap = [
   {
-    // path: '/',
-    // name: 'FrameworkSocketIpc',
-    // component: () => import('@/views/framework/socket/Ipc.vue')
+    path: '/',
+    redirect: '/excel'
   },
+  {
+    path: '/excel',
+    name: 'Excel',
+    component: () => import('@/views/Excel.vue')
+  },
+  {
+    path: '/chart',
+    name: 'Chart',
+    component: () => import('@/views/Chart.vue')
+  }
 ]
 
 export default constantRouterMap

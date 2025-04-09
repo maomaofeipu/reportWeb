@@ -4,7 +4,6 @@ import App from './App.vue'
 import naive from 'naive-ui'
 import Router from './router/index'
 import Print from 'vue3-print-nb'
-import $ from 'jquery'
 
 //引入
 const app = createApp(App)
