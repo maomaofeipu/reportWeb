@@ -1,0 +1,7 @@
+{
+  "database": "paradb",
+  "host": "localhost",
+  "password": "root123",
+  "port": "3306",
+  "user": "root"
+}
