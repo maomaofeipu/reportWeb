@@ -10,8 +10,6 @@
           :pattern="searchContent"
           :node-props="nodeProps"
           :on-update:expanded-keys="updatePrefixWithExpaned"
-          :render-label="nodelabel"
-          :render-suffix="nodesuffix"
         />
       </n-scrollbar>
     </div>
