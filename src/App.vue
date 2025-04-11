@@ -7,7 +7,6 @@
             <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" @update:value="handleMenuClick" />
           </div>
           <div class="content">
-            <Tree />
             <router-view />
           </div>
         </div>

@@ -576,7 +576,7 @@ onMounted(() => {
 
 <style lang="less" scoped>
   .back {
-    width: 500px;
+    width: 385px;
     min-width: 345px;
     display: flex;
     flex-direction: column;
@@ -649,7 +649,7 @@ onMounted(() => {
       }
     }
     .timePicker {
-      padding: 0 8px;
+      padding: 0 18px;
       font-size: 12px;
       span {
         margin-top: 3px;

@@ -418,7 +418,7 @@ onMounted(() => {
     flex-flow: column nowrap;
     gap: 16px;
     width: 100%;
-    height: 100%;
+    min-height: 525px;
     
     .operation {
       display: flex;
@@ -460,7 +460,11 @@ onMounted(() => {
         
         .status {
           // flex: 1;
-          .status-line {
+          overflow: auto;
+          max-height: 150px;
+          min-width: 100px;
+          width:1100px;
+          status-line {
             display: flex;
             flex-flow: row nowrap;
             gap: 8px;
